@@ -64,7 +64,7 @@ table {
 
 .gameArea {
   width: 300px;
-  height: 100%;
+  min-height: 100vh;
   position: relative;
   margin: auto;
   background-color: #222;
