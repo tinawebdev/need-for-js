@@ -58,8 +58,6 @@ table {
   height: 100px;
   background: transparent url(./image/player.png) center / cover no-repeat;
   position: absolute;
-  left: 125px;
-  bottom: 10px;
 }
 
 .gameArea {
@@ -90,6 +88,22 @@ table {
   color: #fff;
   font-size: 1.5rem;
   background-color: #222;
+  cursor: pointer;
   font-family: sans-serif;
   font-weight: 700;
+}
+
+.score {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 200;
+  color: skyblue;
+  font-size: 1.5rem;
+  background-color: #222;
+  font-family: sans-serif;
+  font-weight: 500;
 }
