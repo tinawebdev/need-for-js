@@ -56,6 +56,7 @@ table {
 .game {
   height: 100%;
   display: flex;
+  padding-top: 12px;
 }
 
 .car, .enemy {
@@ -87,28 +88,30 @@ table {
   top: 0;
   width: 100%;
   margin: 0;
-  padding: 2rem 0;
-  text-align: center;
-  z-index: 200;
-  color: #fff;
-  font-size: 1.5rem;
-  background-color: #222;
+  padding: 1rem 0;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid grey;
   cursor: pointer;
-  font-family: sans-serif;
-  font-weight: 700;
+  padding: 5px 15px;
+}
+
+.btn:disabled {
+  background-color: grey;
+  color: #fff;
+}
+
+.btn:not(:last-child) {
+  margin-right: 15px;
 }
 
 .score {
-  position: absolute;
+  bottom: 0;
   left: 0;
-  top: 0;
-  width: 100%;
-  padding: 1rem 0;
-  text-align: center;
-  z-index: 200;
-  color: skyblue;
-  font-size: 1.5rem;
-  background-color: #222;
-  font-family: sans-serif;
-  font-weight: 500;
+  padding: 1.5rem;
 }

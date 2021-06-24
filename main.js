@@ -6,7 +6,8 @@ const HEIGHT_ELEM = 100;
 const score = document.querySelector('.score'),
       start = document.querySelector('.start'),
       gameArea = document.querySelector('.gameArea'),
-      car = document.createElement('div');
+      car = document.createElement('div'),
+      btns = document.querySelectorAll('.btn');
 
 const music = new Audio('audio/bensound-happyrock.mp3');
 
@@ -30,13 +31,37 @@ const setting = {
   traffic: 2
 };
 
+const changeLevel = (lvl) => {
+  switch(lvl) {
+    case '1':
+      setting.traffic = 4;
+      setting.speed = 3;
+      break;
+    case '2':
+      setting.traffic = 3;
+      setting.speed = 5;
+      break;
+    case '3':
+      setting.traffic = 3;
+      setting.speed = 8;
+      break;
+  }
+}
+
 function getQuantityElements(heightElement) {
   return gameArea.offsetHeight / heightElement + 1;
 }
 
 const getRandomEnemy = (max) => Math.floor((Math.random() * max) + 1);
 
-function startGame() {
+function startGame(event) {
+  const target = event.target;
+  if (!target.classList.contains('btn')) return;
+
+  const levelGame = target.dataset.levelGame;
+  changeLevel(levelGame);
+  btns.forEach(btn => btn.disabled = true);
+
   gameArea.innerHTML = '';
   music.play();
   music.volume = 0.05;
@@ -85,8 +110,8 @@ function playGame() {
     moveRoad();
     moveEnemy();
     setting.score += setting.speed;
-    score.innerHTML = 'SCORE:<br>' + setting.score;
-    
+    score.innerHTML = 'SCORE: ' + setting.score;
+
     if (keys.ArrowLeft && setting.x > 0) {
       setting.x -= setting.speed;
     }
@@ -104,6 +129,7 @@ function playGame() {
     requestAnimationFrame(playGame);
   } else {
     music.pause();
+    btns.forEach(btn => btn.disabled = false);
   }
 }
 
