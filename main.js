@@ -122,6 +122,15 @@ function moveRoad() {
 function moveEnemy() {
   let enemies = document.querySelectorAll('.enemy');
   enemies.forEach(function(enemy) {
+    let carRect = car.getBoundingClientRect();
+    let enemyRect = enemy.getBoundingClientRect();
+
+    if (carRect.top <= enemyRect.bottom &&
+        carRect.right >= enemyRect.left &&
+        carRect.left <= enemyRect.right &&
+        carRect.bottom >= enemyRect.top) {
+          setting.start = false;
+    }
     enemy.y += setting.speed / 2;
     enemy.style.top = enemy.y + 'px';
 
