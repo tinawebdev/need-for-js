@@ -7,6 +7,8 @@ const score = document.querySelector('.score'),
       gameArea = document.querySelector('.gameArea'),
       car = document.createElement('div');
 
+const music = new Audio('audio/bensound-happyrock.mp3');
+
 car.classList.add('car');
 
 start.addEventListener('click', startGame);
@@ -34,6 +36,7 @@ function getQuantityElements(heightElement) {
 const getRandomEnemy = (max) => Math.floor((Math.random() * max) + 1);
 
 function startGame() {
+  music.play();
   gameArea.style.minHeight = 100 + 'vh';
   start.classList.add('hide');
 
