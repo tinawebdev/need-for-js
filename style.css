@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  background-color: #222;
 }
 ol, ul {
   list-style: none;
@@ -55,8 +56,8 @@ table {
 
 .game {
   height: 100%;
-  display: flex;
-  padding-top: 12px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
 }
 
 .car, .enemy {
@@ -70,8 +71,8 @@ table {
   width: 300px;
   position: relative;
   margin: auto;
-  background-color: #222;
   overflow: hidden;
+  background-color: #222;
 }
 
 .line {
@@ -83,16 +84,16 @@ table {
 }
 
 .start {
-  position: absolute;
+  z-index: 200;
   left: 0;
   top: 0;
   width: 100%;
   margin: 0;
   padding: 1rem 0;
-  border-bottom: 1px solid grey;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #313131;
 }
 
 .btn {
@@ -111,7 +112,9 @@ table {
 }
 
 .score {
-  bottom: 0;
+  position: absolute;
+  top: 0;
   left: 0;
   padding: 1.5rem;
+  color: #fff;
 }

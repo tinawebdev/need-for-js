@@ -66,9 +66,10 @@ function startGame(event) {
   music.play();
   music.volume = 0.05;
 
-  gameArea.style.minHeight = 100 + 'vh';
-  // gameArea.style.minHeight = Math.floor((document.documentElement.clientHeight - HEIGHT_ELEM) / HEIGHT_ELEM) * HEIGHT_ELEM + 'px';
+  gameArea.style.outline = "1px solid #666";
+  gameArea.style.minHeight = Math.floor((document.documentElement.clientHeight - HEIGHT_ELEM) / HEIGHT_ELEM) * HEIGHT_ELEM + 'px';
   start.classList.add('hide');
+  start.style.borderBottom = "1px solid #666";
 
   for (let i = 0; i < getQuantityElements(HEIGHT_ELEM); i++) {
     const line = document.createElement(`div`);
@@ -97,7 +98,6 @@ function startGame(event) {
   setting.start = true;
   gameArea.appendChild(car);
   car.style.left = '125px';
-  console.log('car-style: ', car.style.left);
   car.style.top = 'auto';
   car.style.bottom = '10px';
   setting.x = car.offsetLeft;
