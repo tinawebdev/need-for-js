@@ -97,14 +97,22 @@ table {
 }
 
 .btn {
-  border: 1px solid grey;
+  background-color: #222;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 5px 15px;
+  padding: 10px 30px;
+  color: #fff;
+  border: 1px solid grey;
+  transition: all 0.5s ease-out;
+}
+
+.btn:hover {
+  background-color: rgb(78, 78, 78);
 }
 
 .btn:disabled {
   background-color: grey;
-  color: #fff;
+  color: lightgray;
 }
 
 .btn:not(:last-child) {
