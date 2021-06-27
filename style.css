@@ -123,6 +123,16 @@ table {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 1.7rem;
+  color: #fff;
+}
+
+.name {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 1.5rem;
+  font-size: 1.3rem;
+  font-style: italic;
   color: #fff;
 }
