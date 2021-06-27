@@ -5,7 +5,7 @@ const HEIGHT_ELEM = 100;
 
 const score = document.querySelector('.score'),
       start = document.querySelector('.start'),
-      gameArea = document.querySelector('.gameArea'),
+      gameArea = document.querySelector('.game-area'),
       car = document.createElement('div'),
       btns = document.querySelectorAll('.btn');
 
@@ -66,10 +66,8 @@ function startGame(event) {
   music.play();
   music.volume = 0.05;
 
-  gameArea.style.outline = "1px solid #666";
+  gameArea.style.outline = "1px dashed #666";
   gameArea.style.minHeight = Math.floor((document.documentElement.clientHeight - HEIGHT_ELEM) / HEIGHT_ELEM) * HEIGHT_ELEM + 'px';
-  start.classList.add('hide');
-  start.style.borderBottom = "1px solid #666";
 
   for (let i = 0; i < getQuantityElements(HEIGHT_ELEM); i++) {
     const line = document.createElement(`div`);

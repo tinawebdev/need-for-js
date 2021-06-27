@@ -1,63 +1,100 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
 body {
-  line-height: 1;
+  padding: 0;
+  margin: 0 auto;
   background-color: #222;
 }
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+/* ----------------------------
+  HEADER 
+---------------------------- */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  min-width: 100%;
 }
 
-/* -------------------------------------- */
-
-.hide {
-  display: none;
+.header_theme_dark {
+  background-color: #313131;
+  color: #fff;
 }
+
+/* ----------------------------
+  HEADER / game title
+---------------------------- */
+
+.header__title {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/* ----------------------------
+  HEADER / score
+---------------------------- */
+
+.score {
+  font-size: 1.2rem;
+  min-width: 130px;
+}
+
+.header .score {
+  padding: 5px;
+}
+
+/* ----------------------------
+  HEADER / start buttons
+---------------------------- */
+
+.start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  min-width: 125px;
+  background-color: #222;
+  cursor: pointer;
+  padding: 10px 40px;
+  margin-bottom: 5px;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.btn:hover {
+  background-color: rgb(78, 78, 78);
+}
+
+.btn:disabled {
+  color: rgb(78, 78, 78);
+  background-color: #222;
+}
+
+.btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* ----------------------------
+  GAME & GAME AREA
+---------------------------- */
 
 .game {
-  height: 100%;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+  display: flex;
+  align-items: center;
+  min-height: calc(90vh - 50px);
 }
 
 .car, .enemy {
@@ -67,7 +104,7 @@ table {
   position: absolute;
 }
 
-.gameArea {
+.game-area {
   width: 300px;
   position: relative;
   margin: auto;
@@ -83,56 +120,15 @@ table {
   left: 145px;
 }
 
-.start {
-  z-index: 200;
-  left: 0;
-  top: 0;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ----------------------------
+  FOOTER
+---------------------------- */
+
+.footer {
+  height: 50px;
   background-color: #313131;
 }
 
-.btn {
-  background-color: #222;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 10px 30px;
-  color: #fff;
-  border: 1px solid grey;
-  transition: all 0.5s ease-out;
-}
-
-.btn:hover {
-  background-color: rgb(78, 78, 78);
-}
-
-.btn:disabled {
-  background-color: grey;
-  color: lightgray;
-}
-
-.btn:not(:last-child) {
-  margin-right: 15px;
-}
-
-.score {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1.7rem;
-  color: #fff;
-}
-
-.name {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1.5rem;
-  font-size: 1.3rem;
-  font-style: italic;
-  color: #fff;
-}
+/* .hide {
+  display: none;
+} */

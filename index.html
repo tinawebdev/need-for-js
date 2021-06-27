@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="game">
-      <h1 class="name">Let's play Need for JS!</h1>
-      <div class="score"></div>
+    <header class="header header_theme_dark">
+      <div class="score">SCORE: 0</div>
       <div class="start">
         <button class="btn" data-level-game="1">easy</button>
         <button class="btn" data-level-game="2">middle</button>
         <button class="btn" data-level-game="3">hard</button>
       </div>
-      <div class="gameArea"></div>
-    </div>
+      <div class="header__title">
+        <p>Need for JS</p>
+      </div>
+    </header>
+
+    <main class="game">
+      <div class="game-area"></div>
+    </main>
+
+    <footer class="footer"></footer>
     <script src="./main.js"></script>
   </body>
 </html>
