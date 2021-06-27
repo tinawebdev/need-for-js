@@ -110,7 +110,7 @@ function playGame() {
     moveRoad();
     moveEnemy();
     setting.score += setting.speed;
-    score.innerHTML = 'SCORE: ' + setting.score;
+    score.innerHTML = `<b>SCORE: ${setting.score}</b>`;
 
     if (keys.ArrowLeft && setting.x > 0) {
       setting.x -= setting.speed;
@@ -137,7 +137,6 @@ function startRun(event) {
   if (keys.hasOwnProperty(event.key)) {
     event.preventDefault();
     keys[event.key] = true;
-    console.log(keys);
   }
 }
 
