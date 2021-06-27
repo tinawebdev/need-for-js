@@ -10,6 +10,10 @@ body {
   background-color: #222;
 }
 
+.hide {
+  display: none;
+}
+
 /* ----------------------------
   HEADER 
 ---------------------------- */
@@ -112,6 +116,13 @@ body {
   background-color: #222;
 }
 
+.game-area__text {
+  align-self: start;
+  color: rgb(105, 105, 105);
+  text-align: center;
+  padding: 10px 0;
+}
+
 .line {
   position: absolute;
   width: 10px;
@@ -125,10 +136,26 @@ body {
 ---------------------------- */
 
 .footer {
-  height: 50px;
+  min-height: 50px;
   background-color: #313131;
 }
 
-/* .hide {
-  display: none;
-} */
+.game-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: cener;
+  color: #fff;
+}
+
+.game-description__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.game-description__item {
+  padding: 0 25px;
+}
