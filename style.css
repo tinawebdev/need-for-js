@@ -42,6 +42,10 @@ body {
   font-style: italic;
 }
 
+.header__text_color_gold {
+  color: gold;
+}
+
 /* ----------------------------
   HEADER / score
 ---------------------------- */
