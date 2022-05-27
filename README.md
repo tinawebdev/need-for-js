@@ -3,10 +3,10 @@ Car Racing Game written in HTML, CCS and JavaScript.
 
 ## Gameplay
 ### Move using:
-- `Left arrow ←`
-- `Up arrow ↑`
-- `Down arrow ↓`
-- `Right arrow →`
+- `Up arrow ↑` or `W`
+- `Left arrow ←` or `A`
+- `Down arrow ↓` or `S`
+- `Right arrow →` or `D`
 
 ## Demo
 You can view a live version [here](https://tinawebdev.github.io/need-for-js/).
