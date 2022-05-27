@@ -74,6 +74,7 @@ function startGame(event) {
   gameArea.innerHTML = '';
   music.play();
   music.volume = 0.05;
+  music.loop = true;
 
   gameAreaTexts.forEach(text => text.classList.add('hide'));
   gameArea.style.outline = "1px dashed #666";
