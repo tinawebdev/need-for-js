@@ -5,39 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NeedForJS</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <header class="header header_theme_dark">
-      <div class="score"><b>SCORE: 0</b></div>
-      <div class="start">
-        <button class="btn" data-level-game="1">easy</button>
-        <button class="btn" data-level-game="2">middle</button>
-        <button class="btn" data-level-game="3">hard</button>
-      </div>
-      <div class="header__title">
-        <h3 class="header__text">Need for <span class="header__text_color_gold">JS</span></h3>
-      </div>
-    </header>
+    <div class="container">
+      <!-- Header -->
+      <header class="header header_theme_dark">
+        <div class="score"><b>SCORE: 0</b></div>
+        <div class="start">
+          <button class="btn" data-level-game="1">easy</button>
+          <button class="btn" data-level-game="2">middle</button>
+          <button class="btn" data-level-game="3">hard</button>
+        </div>
+        <div class="header__title">
+          <h3 class="header__text">Need for <span class="header__text_color_gold">JS</span></h3>
+        </div>
+      </header>
 
-    <main class="game">
-      <div class="game-area">
-        <h1 class="game-area__text">Welcome to car racing game!</h1>
-        <h2 class="game-area__text">Select your game level and let's play!</h2>
-      </div>
-    </main>
+      <!-- Game Area -->
+      <main class="game">
+        <div class="game-area">
+          <h1 class="game-area__text">Welcome to car racing game!</h1>
+          <h2 class="game-area__text">Select your game level and let's play!</h2>
+        </div>
+      </main>
 
-    <footer class="footer">
-      <div class="game-description">
-        <h3>Move using:</h3>
-        <ul class="game-description__list">
-          <li class="game-description__item">Left arrow &#x2190;</li>
-          <li class="game-description__item">Up arrow &#x2191;</li>
-          <li class="game-description__item">Down arrow &#x2193;</li>
-          <li class="game-description__item">Right arrow &#x2192;</li>
-        </ul>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="game-description">
+          <h3>Move using:</h3>
+          <ul class="game-description__list">
+            <li class="game-description__item">Left arrow &#x2190;</li>
+            <li class="game-description__item">Up arrow &#x2191;</li>
+            <li class="game-description__item">Down arrow &#x2193;</li>
+            <li class="game-description__item">Right arrow &#x2192;</li>
+          </ul>
+        </div>
+      </footer>
+
+      <!-- Modal -->
+      <div class="modal-container" id="modal">
+        <div class="modal">
+          <span class="close-icon" id="close-modal">&#x2715;</span>
+          <div class="modal-content">
+            <p>Game Over!</p>
+            <p class="modal-content__text"></p>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+
+    <!-- Mobile Message -->
+    <div class="mobile-message" hidden>
+      <h2>Please use application on larger screen!</h2>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>

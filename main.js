@@ -8,7 +8,11 @@ const score = document.querySelector('.score'),
       gameArea = document.querySelector('.game-area'),
       gameAreaTexts = document.querySelectorAll('.game-area__text'),
       car = document.createElement('div'),
-      btns = document.querySelectorAll('.btn');
+      btns = document.querySelectorAll('.btn'),
+      modal = document.getElementById('modal'),
+      modalContent = document.querySelector('.modal-content'),
+      modalContentText = document.querySelector('.modal-content__text'),
+      modalClose = document.getElementById('close-modal');
 
 const music = new Audio('audio/bensound-happyrock.mp3');
 
@@ -88,7 +92,7 @@ function startGame(event) {
     enemy.style.top = enemy.y + 'px';
     enemy.style.background = `
         transparent 
-        url(./image/enemy${getRandomEnemy(MAX_ENEMIES)}.png) 
+        url(./img/enemy${getRandomEnemy(MAX_ENEMIES)}.png) 
         center / cover 
         no-repeat`;
     gameArea.appendChild(enemy);
@@ -130,6 +134,7 @@ function playGame() {
   } else {
     music.pause();
     btns.forEach(btn => btn.disabled = false);
+    showModal();
   }
 }
 
@@ -181,3 +186,20 @@ function moveEnemy() {
     }
   });
 }
+
+// Show Modal
+function showModal() {
+  modal.classList.add('show-modal');
+  modalContentText.innerHTML = `Result: <span class="modal-content__score">${setting.score}</span>`;
+}
+
+// Modal Event Listeners
+modalClose.addEventListener('click', () => {
+  modal.classList.remove('show-modal');
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('show-modal');
+  }
+})

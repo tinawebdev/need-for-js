@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -8,6 +10,7 @@ body {
   padding: 0;
   margin: 0 auto;
   background-color: #222;
+  font-family: 'Oswald', sans-serif;
 }
 
 .hide {
@@ -30,7 +33,7 @@ body {
 
 .header_theme_dark {
   background-color: #313131;
-  color: #fff;
+  color: #DCDCDC;
 }
 
 /* ----------------------------
@@ -43,7 +46,7 @@ body {
 }
 
 .header__text_color_gold {
-  color: gold;
+  color: #FBC02D;
 }
 
 /* ----------------------------
@@ -71,12 +74,13 @@ body {
 }
 
 .btn {
+  font-family: 'Oswald', sans-serif;
   min-width: 125px;
   background-color: #222;
   cursor: pointer;
   padding: 10px 40px;
   margin-bottom: 5px;
-  color: #fff;
+  color: #DCDCDC;
   border: 1px solid #222;
   border-radius: 5px;
   transition: all 0.5s ease-out;
@@ -108,7 +112,7 @@ body {
 .car, .enemy {
   width: 50px;
   height: 100px;
-  background: transparent url(./image/player.png) center / cover no-repeat;
+  background: transparent url(../img/player.png) center / cover no-repeat;
   position: absolute;
 }
 
@@ -131,7 +135,7 @@ body {
   position: absolute;
   width: 10px;
   height: 50px;
-  background-color: #fff;
+  background-color: #DCDCDC;
   left: 145px;
 }
 
@@ -149,7 +153,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: cener;
-  color: #fff;
+  color: #DCDCDC;
 }
 
 .game-description__list {
@@ -162,4 +166,98 @@ body {
 
 .game-description__item {
   padding: 0 25px;
+}
+
+/* ----------------------------
+  MODAL
+---------------------------- */
+
+/* Modal */
+.modal-container {
+  background-color: rgba(34, 33, 33, 0.767);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.show-modal {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  max-width: 95%;
+  background-color: #222;
+  border: 1px solid rgb(78, 78, 78);
+  width: 500px;
+  border-radius: 5px;
+  animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close-icon {
+  float: right;
+  color: rgb(78, 78, 78);
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.close-icon:hover {
+  transform: scale(1.5);
+}
+
+.modal-content {
+  padding: 35px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  color: #DCDCDC;
+}
+
+.modal-content__text {
+  font-size: .6em;
+  font-weight: 400;
+  color: #DCDCDC;
+}
+
+.modal-content__score {
+  font-weight: 800;
+  color: #FBC02D;
+}
+
+
+/* Media Query: Mobile Devices */
+@media screen and (max-width: 800px) {
+  .mobile-message {
+    visibility: visible;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    color: rgb(105, 105, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .container {
+    display: none;
+  }
 }
