@@ -26,7 +26,11 @@ const keys = {
   ArrowUp: false,
   ArrowDown: false,
   ArrowRight: false,
-  ArrowLeft: false
+  ArrowLeft: false,
+  w: false,
+  a: false,
+  s: false,
+  d: false,
 };
 
 const setting = {
@@ -116,16 +120,16 @@ function playGame() {
     setting.score += setting.speed;
     score.innerHTML = `<b>SCORE: ${setting.score}</b>`;
 
-    if (keys.ArrowLeft && setting.x > 0) {
+    if ((keys.ArrowLeft || keys.a) && setting.x > 0) {
       setting.x -= setting.speed;
     }
-    if (keys.ArrowRight && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
+    if ((keys.ArrowRight || keys.d) && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
       setting.x += setting.speed;
     }
-    if (keys.ArrowUp && setting.y > 0) {
+    if ((keys.ArrowUp || keys.w) && setting.y > 0) {
       setting.y -= setting.speed;
     }
-    if (keys.ArrowDown && setting.y < (gameArea.offsetHeight - car.offsetHeight)) {
+    if ((keys.ArrowDown || keys.s) && setting.y < (gameArea.offsetHeight - car.offsetHeight)) {
       setting.y += setting.speed;
     }
     car.style.left = setting.x + 'px';
