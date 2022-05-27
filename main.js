@@ -10,7 +10,6 @@ const score = document.querySelector('.score'),
       car = document.createElement('div'),
       btns = document.querySelectorAll('.btn'),
       modal = document.getElementById('modal'),
-      modalContent = document.querySelector('.modal-content'),
       modalContentText = document.querySelector('.modal-content__text'),
       modalClose = document.getElementById('close-modal');
 
